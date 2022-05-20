@@ -1,0 +1,19 @@
+<div class="envelope-wrapper">
+  <div class="envelope">
+    <div class="envelope-opened" *ngIf="isOpened"></div>
+    <h1 *ngIf="isOpened">Happy Birthday</h1>
+    <div class="envelope-card" (click)="open()"></div>
+  </div>
+  <div class="hearts" *ngIf="isOpened">
+    <div class="heart a1"></div>
+    <div class="heart a2"></div>
+    <div class="heart a3"></div>
+    <div class="heart a4"></div>
+    <div class="heart a5"></div>
+    <div class="heart a6"></div>
+    <div class="heart a7"></div>
+    <div class="heart a8"></div>
+    <div class="heart a9"></div>
+    <div class="heart a10"></div>
+  </div>
+</div>

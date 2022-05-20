@@ -1,0 +1,196 @@
+.hearts {
+  position: absolute;
+  top: 85vh;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.heart {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: '';
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #d00000;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+.heart {
+  opacity: 0;
+  animation: none;
+}
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  opacity: 1;
+  animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a2 {
+  left: 55%;
+  transform: scale(0.3);
+  opacity: 1;
+  animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a3 {
+  left: 10%;
+  transform: scale(0.5);
+  opacity: 1;
+  animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a4 {
+  left: 30%;
+  transform: scale(0.4);
+  opacity: 1;
+  animation: slideUp 6s linear 1, sideSway 3s ease-in-out 3 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a5 {
+  left: 5%;
+  transform: scale(0.7);
+  opacity: 1;
+  animation: slideUp 3s linear 1, sideSway 5s ease-in-out 5 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a6 {
+  left: 15%;
+  transform: scale(0.3);
+  opacity: 1;
+  animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a7 {
+  left: 48%;
+  transform: scale(0.8);
+  opacity: 1;
+  animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a8 {
+  left: 30%;
+  transform: scale(0.3);
+  opacity: 1;
+  animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a9 {
+  left: 10%;
+  transform: scale(0.4);
+  opacity: 1;
+  animation: slideUp 6s linear 1, sideSway 3s ease-in-out 3 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+.a10 {
+  left: 41%;
+  transform: scale(0.2);
+  opacity: 1;
+  animation: slideUp 3s linear 1, sideSway 5s ease-in-out 5 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  animation-iteration-count: infinite;
+}
+@keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -800px;
+  }
+}
+@keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 100px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+body {
+  overflow: hidden;
+}
+.envelope-card {
+  background-color: #ffcba4;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-top: 100px solid tomato;
+}
+.envelope-opened {
+  position: absolute;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid tomato;
+  top: -25px;
+  left: 25%;
+  z-index: -1;
+}
+.envelope {
+  position: relative;
+  margin-top: 25%;
+}
+
+.envelope h1 {
+  margin-left: 19%;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  color: #fff;
+  filter: blur(0.01em);
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px red, 0 0 20px rgb(175, 65, 65),
+    0 0 40px rgb(236, 72, 72), 0 0 80px rgb(187, 75, 75), 0 0 120px red;
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .envelope h1 {
+    margin-left: 30%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+  }
+  .envelope-opened {
+    top: -54px;
+  }
+  .envelope-wrapper {
+    margin-left: -20%;
+    margin-top: 30vh;
+  }
+}
